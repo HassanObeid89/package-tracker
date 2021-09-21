@@ -1,16 +1,25 @@
-import Header from './components/Header';
-import Home from './components/Home';
-import PackagesList from './components/PackagesList';
-import PackageItem from './components/PackageItem';
-import './css/style.css';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import PackagesList from "./components/PackagesList";
+import PackageItem from "./components/PackageItem";
+import "./css/style.css";
 
 export default function App() {
   return (
     <div className="App">
-      <Header/>
-      <Home/>
-      {/* <PackagesList />
-      <PackageItem/> */}
+      <Router>
+        <Header />
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/packagesList">
+          <PackagesList />
+        </Route>
+        <Route>
+          <PackageItem path="/packageItem" />
+        </Route>
+      </Router>
     </div>
   );
 }
