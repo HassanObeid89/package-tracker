@@ -9,8 +9,8 @@ export default function App() {
     <div className="App">
       <Header/>
       <Home/>
-      <PackagesList />
-      <PackageItem/>
+      {/* <PackagesList />
+      <PackageItem/> */}
     </div>
   );
 }
