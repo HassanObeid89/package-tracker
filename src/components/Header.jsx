@@ -1,7 +1,7 @@
 export default function Header() {
     return (
-        <div>
-            <p>header</p>
+        <div className='header-wrapper'>
+            <h1>boxTracker</h1>
         </div>
     )
 }
