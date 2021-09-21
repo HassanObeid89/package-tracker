@@ -4,3 +4,7 @@
     --main-text-color: #595050;
     --secondary-text-color: #837c7c;
   }
+
+  :root {
+    --main-font-normal: 'Roboto Mono', monospace;
+  }
