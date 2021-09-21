@@ -1,8 +1,8 @@
-import Card from './Card'
+import Card from "./Card";
 export default function PackagesList() {
-    return (
-        <div>
-            <Card/>
-        </div>
-    )
+  return (
+    <div className="packages-wrapper">
+      <Card />
+    </div>
+  );
 }
