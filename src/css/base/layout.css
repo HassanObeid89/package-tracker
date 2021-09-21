@@ -4,5 +4,6 @@ body {
 
 .App {
   background-color:var(--main-bg-color);
-  height: 100vh;
+  height: 200vh;
+  background-image: url('../../assets/images/parcel-tiles.png');
 }
