@@ -1,9 +1,5 @@
 body {
   margin: 0;
-}
-
-.App {
-  background-color:var(--main-bg-color);
-  height: 100vh;
-  background-image: url('../../assets/images/parcel-tiles.png');
+  background-color: var(--main-bg-color);
+  background-image: url("../../assets/images/parcel-tiles.png");
 }
