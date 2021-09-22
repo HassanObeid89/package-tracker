@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 const getDataLS = () => {
   const data = localStorage.getItem("cards");
-  console.log(data);
   if (data) {
     return JSON.parse(data);
   } else {

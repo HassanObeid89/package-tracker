@@ -9,17 +9,19 @@ export default function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
+        <div className="header">
+          <Header />
+        </div>
         <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/packagesList">
-          <PackagesList />
-        </Route>
-        <Route>
-          <PackageItem path="/packageItem" />
-        </Route>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/packagesList">
+            <PackagesList />
+          </Route>
+          <Route>
+            <PackageItem path="/packageItem" />
+          </Route>
         </Switch>
       </Router>
     </div>

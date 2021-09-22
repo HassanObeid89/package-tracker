@@ -9,7 +9,7 @@ export default function Home() {
         to track your packages.
       </p>
       <Link to="/packagesList">
-        <button>Track your packages</button>
+        <button className='primary-button'>Track your packages</button>
       </Link>
     </div>
   );

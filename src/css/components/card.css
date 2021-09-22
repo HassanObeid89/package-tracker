@@ -1,6 +1,59 @@
+.card-wrapper {
+  list-style: none;
+  width: 80%;
+  margin: 16px auto;
+  background-color: var(--secondary-bg-color);
+  border-radius: 8px;
+  padding: 16px 16px;
+}
+.card-wrapper li label {
+  display: flex;
+  flex-direction: column;
+}
 .card-wrapper li {
-    list-style: none;
-    margin: 20px 20px;
-    padding: 20px 20px;
-    background-color: var(--secondary-bg-color) ;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.card-wrapper svg {
+  font-size: 30px;
+  color: var(--main-text-color);
+  margin-right: 12px;
+}
+
+.card-wrapper p {
+  color: var(--secondary-text-color);
+}
+
+.card-wrapper span {
+  color: var(--main-text-color);
+  font-size: 18px;
+}
+
+.line {
+  height: 4px;
+  width: 90%;
+  float: right;
+  background-size: 6px 100%;
+  background-image: url("../../assets/images/line.svg");
+  margin: 16px 0;
+}
+
+.button-wrapper {
+  margin-top: 40px;
+  width: 100%;
+  text-align: right;
+}
+
+.button-wrapper .secondary-button {
+  background: var(--main-bg-color);
+  height: 40px;
+  color: var(--secondary-bg-color);
+  font-size: 16px;
+  border-radius: 26px;
+  padding: 10px 24px 14px;
+  border: 2px solid transparent;
+  max-width: 300px;
 }

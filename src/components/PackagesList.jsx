@@ -8,7 +8,7 @@ export default function PackagesList() {
     <div className="packages-wrapper">
       {loading && 'loading...'}
       {error && JSON.stringify(error, null, 2)}
-      <ul>{cards}</ul> 
+      <ul>{cards}</ul>
     </div>
   );
 }
