@@ -43,5 +43,6 @@
 
 .packages-wrapper{
     height: 100vh;
-    background-color: aqua;
+    padding: 90px 90px;
+    
 }

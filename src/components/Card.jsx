@@ -1,10 +1,8 @@
-export default function Card() {
+export default function Card({parcel}) {
     return (
-        <div>
+        <div className='card-wrapper'>
             <li>
-                <p>icon</p>
-                <span></span>
-                <label></label>
+                
             </li>
         </div>
     )
