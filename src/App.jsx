@@ -1,11 +1,14 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useFetch } from "./scripts/useFetch";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import PackagesList from "./components/PackagesList";
-import PackageItem from "./components/PackageItem";
+import Item from "./components/Item";
 import "./css/style.css";
 
 export default function App() {
+  const uri = "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840";
+  const { loading, data, error } = useFetch();
   return (
     <div className="App">
       <Router>
@@ -13,14 +16,12 @@ export default function App() {
           <Header />
         </div>
         <Switch>
-          <Route path="/" exact>
-            <Home />
+          <Route path="/" exact component={Home}/>
+          <Route path="/packagesList/">
+            <PackagesList loading={loading} data={data} error={error} />
           </Route>
-          <Route path="/packagesList">
-            <PackagesList />
-          </Route>
-          <Route>
-            <PackageItem path="/packageItem" />
+          <Route path="/item/:id">
+            <Item data={data}/>
           </Route>
         </Switch>
       </Router>
