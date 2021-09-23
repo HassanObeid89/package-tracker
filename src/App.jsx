@@ -8,7 +8,8 @@ import "./css/style.css";
 
 export default function App() {
   const uri = "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840";
-  const { loading, data, error } = useFetch();
+  const { loading, data, error } = useFetch(uri);
+  
   return (
     <div className="App">
       <Router>

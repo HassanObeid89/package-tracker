@@ -4,5 +4,6 @@
 @import "./components/header.css";
 @import "./components/home.css";
 @import "./components/card.css";
+@import './components/map.css';
 @import url("https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Stick+No+Bills:wght@700&display=swap");
