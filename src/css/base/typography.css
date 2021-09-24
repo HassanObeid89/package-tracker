@@ -6,11 +6,12 @@ p {
   margin-bottom: 0;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
-ul, li {
+ul,
+li {
   margin: 0;
   padding: 0;
 }

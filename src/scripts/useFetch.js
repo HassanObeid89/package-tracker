@@ -26,8 +26,6 @@ export function useFetch(uri) {
     }, 2000);
   }, []);
 
-  return { loading, data, error };
-
   function fetcher(uri, cache) {
     fetch(uri).then((result) => {
       //make a copy
@@ -42,4 +40,5 @@ export function useFetch(uri) {
         .catch(setError);
     });
   }
+  return { loading, data, error };
 }
