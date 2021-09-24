@@ -30,11 +30,11 @@ Open [http://localhost:3000] to view it in the browser.
 - Firebase Cloud Hosting.
 
 4. ## Porject organization
-- Requirement gathering [icloudlink]
+- Requirement gathering [icloud link]
 - Project spreadsheet [Spread sheet]
 - Users flow chart [Users flow chart]
 - Design mockup [Design mockup]
-- Component tree
+- Component tree [Component tree]
     
 
 
@@ -46,4 +46,4 @@ Open [http://localhost:3000] to view it in the browser.
 [Spread sheet]: https://docs.google.com/spreadsheets/d/1C8kT0vXKhqCnKiuOEmvucvTvfwFjAw5M/edit?usp=sharing&ouid=115827464576694642970&rtpof=true&sd=true
 [Users flow chart]: https://whimsical.com/flowchart-package-tracker-hassan-QYKf2GLmYQEuT4hpEhZhk7
 [Design mockup]: https://www.figma.com/file/1WqTUTQ9u351ABbuPndaj2/Package-tracker-hassan?node-id=5%3A157
-[Component tree]: 
+[Component tree]: https://whimsical.com/package-tracker-7pTEgXWvzd1x2phiHrZwDc
