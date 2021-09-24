@@ -11,7 +11,7 @@ export default function Map({ coordinates }) {
       <GoogleMapReact
         bootstrapURLKeys={{ key: `AIzaSyDjS78sgnz9N94HIs4yaeGEcDqiAF7R-w4` }}
         defaultCenter={coordinates}
-        defaultZoom={6}
+        defaultZoom={15}
         yesIWantToUseGoogleMapApiInternals
       >
         <Marker lat={coordinates.lat} lng={coordinates.lng} />

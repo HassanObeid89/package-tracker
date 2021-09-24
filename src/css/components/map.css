@@ -1,8 +1,15 @@
 .map-wrapper {
-    height: 200px;
-    margin-top: 24px;
+  height: 200px;
+  margin-top: 24px;
 }
-.map-wrapper GoogleMapReact{
-    height: 100%;
-    width: 100%;
+.map-wrapper GoogleMapReact {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 960px) {
+  .map-wrapper {
+    height: 360px;
+    margin-top: 60px;
+  }
 }

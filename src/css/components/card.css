@@ -1,10 +1,31 @@
 .card-wrapper {
-  list-style: none;
   width: 80%;
-  margin: 16px auto;
+  margin: 16px 16px;
   background-color: var(--secondary-bg-color);
   border-radius: 8px;
   padding: 16px 16px;
+  max-width: 360px;
+}
+.packages-wrapper section {
+  width: 80%;
+  padding: 16px 12px;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+}
+.packages-wrapper section svg {
+  font-size: 50px;
+  color: white;
+}
+.packages-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
 }
 .card-wrapper li label {
   display: flex;
@@ -17,17 +38,17 @@
   margin-bottom: 8px;
 }
 
-.card-wrapper svg {
+svg {
   font-size: 30px;
   color: var(--main-text-color);
   margin-right: 12px;
 }
 
-.card-wrapper p {
+p {
   color: var(--secondary-text-color);
 }
 
-.card-wrapper span {
+span {
   color: var(--main-text-color);
   font-size: 18px;
 }
@@ -46,7 +67,7 @@
   text-align: right;
 }
 
-.button-wrapper .secondary-button {
+.secondary-button {
   background: var(--main-bg-color);
   height: 40px;
   color: var(--secondary-bg-color);
@@ -55,4 +76,21 @@
   padding: 10px 24px 14px;
   border: 2px solid transparent;
   max-width: 300px;
+}
+
+@media screen and (min-width: 960px) {
+  .packages-wrapper ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: flex-start;
+    align-items: flex-start;
+  }
+  .card-wrapper {
+    margin: 16px 16px;
+  }
+  .packages-wrapper section {
+    justify-content: center;
+  }
 }

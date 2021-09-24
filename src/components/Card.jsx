@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-
 import { HiOutlineFingerPrint } from "react-icons/hi";
 import { FaTruck } from "react-icons/fa";
 import { RiShoppingCartFill } from "react-icons/ri";
+
 export default function Card({ parcel }) {
   const { id, parcel_id, status, sender } = parcel;
   return (
