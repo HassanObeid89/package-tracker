@@ -6,6 +6,7 @@ import PackagesList from "./components/PackagesList";
 import Item from "./components/Item";
 import "./css/style.css";
 
+
 export default function App() {
   const uri = "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840";
   const { loading, data, error } = useFetch(uri);
@@ -16,10 +17,15 @@ export default function App() {
         <div className="header">
           <Header />
         </div>
+        
         <Switch>
-          <Route path="/" exact component={Home}/>
-          <Route path="/packagesList/">
-            <PackagesList loading={loading} data={data} error={error} />
+          {/* <Route path="/" exact component={Home}/> */}
+          <Route path="/" exact>
+            <PackagesList 
+            loading={loading} 
+             data={data} 
+             error={error} 
+            />
           </Route>
           <Route path="/item/:id">
             <Item data={data}/>
