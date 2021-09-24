@@ -2,7 +2,6 @@
 @import "./base/layout.css";
 @import "./base/variables.css";
 @import "./components/header.css";
-@import "./components/home.css";
 @import "./components/card.css";
 @import "./components/map.css";
 @import "./components/spinner.css";
