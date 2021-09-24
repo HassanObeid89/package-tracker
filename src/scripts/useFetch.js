@@ -1,40 +1,45 @@
 import { useState, useEffect } from "react";
-const fs = require('fs')
-const getDataLS = () => {
-const data = localStorage.getItem('cards');
-if (data) {
-  return JSON.parse(data);
-} else {
-  return [];
-}
-};
 export function useFetch(uri) {
-  
-  const [data, setData] = useState(getDataLS());
+  const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
-  
-
-  // function saveData(fileName='',json=[]) {
-  //    fs.writeFileSync(fileName, JSON.stringify(json))
-  //    console.log(json)
-  //   }
-
 
   useEffect(() => {
+    //check the cache
     if (!uri) return;
     setTimeout(() => {
-      fetch(uri)
-        .then((response) => response.json())
-        .then(setData)
-        .then(() => setLoading(false))
-        .then(() => localStorage.setItem("cards", JSON.stringify(data)))
-        .catch(setError);
-    }, 1000);
-  }, [uri]);
-  
-
-  
+      if ("caches" in window) {
+        window.caches.open("my-data-caches").then((cache) => {
+          cache.match(uri).then((result) => {
+            if (result === undefined) {
+              //fetch the request normally
+              fetcher(uri, cache);
+            } else {
+              result.json().then((cachedData) => {
+                setData(cachedData);
+                setLoading(false);
+              });
+            }
+          });
+        });
+      }
+    }, 2000);
+  }, []);
 
   return { loading, data, error };
+
+  function fetcher(uri, cache) {
+    fetch(uri).then((result) => {
+      //make a copy
+      let clonedResponse = result.clone();
+      cache.put(uri, result);
+      clonedResponse
+        .json()
+        .then((data) => {
+          setData(data);
+          setLoading(false);
+        })
+        .catch(setError);
+    });
+  }
 }

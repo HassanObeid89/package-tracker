@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-
+import { useFetch } from "../scripts/useFetch";
 export default function Home() {
+  
   return (
     <div className="home-wrapper">
       <h1>Track your packages</h1>

@@ -9,7 +9,7 @@ export default function Map({ coordinates }) {
   return (
     <div className="map-wrapper">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: `${process.env.REACT_APP_GOOGLE_KEY}` }}
+        bootstrapURLKeys={{ key: `AIzaSyDjS78sgnz9N94HIs4yaeGEcDqiAF7R-w4` }}
         defaultCenter={coordinates}
         defaultZoom={6}
         yesIWantToUseGoogleMapApiInternals
