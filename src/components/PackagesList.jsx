@@ -7,7 +7,7 @@ export default function PackagesList({ data }) {
     <div className="packages-wrapper">
       <section>
         <FaRegSmileBeam />
-        <h2>Thanks {name[1]} for using boxTraker</h2>
+        <h2>Thanks {name[0]} for using boxTraker</h2>
       </section>
       <ul>{cards}</ul>
     </div>
