@@ -20,6 +20,7 @@ export default function App() {
   return (
     <div className="App">
       <Router>
+        {/* Nesting -1 why the header is wrapped up in a div with a class called header? */}
         <div className="header">
           <Header />
         </div>
@@ -27,6 +28,8 @@ export default function App() {
           <Route path="/" exact>
             <PackagesList data={data} />
           </Route>
+          {/* Naming Item should not be the name of a page, it goes against naming conventions. Ask any fellow developer what Item.jsx do and they will tell you is an individual list item not the full item information page -1 */}
+          {/* By your own naming PackagesList this should be called PackageDetail */}
           <Route path="/item/:id">
             <Item data={data} />
           </Route>

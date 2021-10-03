@@ -7,6 +7,7 @@ import { GrMapLocation } from "react-icons/gr";
 import moment from "moment";
 import Map from "./Map";
 
+// By having this item inside the components folder, i would think is a normal component not a Route page -1
 export default function Item({ data }) {
   const params = useParams();
   const location = useHistory();
@@ -19,6 +20,9 @@ export default function Item({ data }) {
     lng: item[0].location_coordinate_longitude,
   };
 
+  // Refactoring DRY and Abastraction -1
+  // The component is too long, you have a lot of repetition, you could have created a component called ItemDetail (look sounds confusing when the parent page is called Item)
+  // then you put the <li> and pass the icon and any kind of order text as props.
   return (
     <div className="item-wrapper">
       <ul>

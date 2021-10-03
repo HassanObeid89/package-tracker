@@ -1,5 +1,7 @@
 import Card from "./Card";
 import { FaRegSmileBeam } from "react-icons/fa";
+
+// This could be on a separate folder to make it easier to organize.
 export default function PackagesList({ data }) {
   const cards = data.map((parcel) => <Card key={parcel.id} parcel={parcel} />);
   const name = data[0].user_name.split(" ");
