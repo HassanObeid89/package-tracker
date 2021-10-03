@@ -7,6 +7,7 @@ export function useFetch(uri) {
   useEffect(() => {
     //check the cache
     if (!uri) return;
+    // why a set time out? Are we hacking a solution to enable the cache? -10 (as mentioned in the anti requirements)
     setTimeout(() => {
       if ("caches" in window) {
         window.caches.open("my-data-caches").then((cache) => {
