@@ -5,7 +5,8 @@ import { RiShoppingCartFill } from "react-icons/ri";
 import { FcCalendar } from "react-icons/fc";
 import { GrMapLocation } from "react-icons/gr";
 import moment from "moment";
-import Map from "./Map";
+
+import Map from "./components/Map";
 
 // By having this item inside the components folder, i would think is a normal component not a Route page -1
 export default function Item({ data }) {

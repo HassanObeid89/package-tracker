@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HashLoader from "react-spinners/HashLoader";
 import { useFetch } from "./scripts/useFetch";
 import Header from "./components/Header";
-import PackagesList from "./components/PackagesList";
-import Item from "./components/Item";
+import PackagesList from "./pages/PackagesList";
+import Item from "./pages/Item";
 
 import "./css/style.css";
 
@@ -21,9 +21,8 @@ export default function App() {
     <div className="App">
       <Router>
         {/* Nesting -1 why the header is wrapped up in a div with a class called header? */}
-        <div className="header">
-          <Header />
-        </div>
+        <Header />
+
         <Switch>
           <Route path="/" exact>
             <PackagesList data={data} />
