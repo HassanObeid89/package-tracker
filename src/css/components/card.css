@@ -9,10 +9,10 @@
 .packages-wrapper section {
   width: 80%;
   padding: 16px 12px;
-  margin: 0 auto;
+  margin: 16px auto;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   justify-items: center;
 }
@@ -21,11 +21,9 @@
   color: white;
 }
 .packages-wrapper ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
   justify-items: center;
-  align-items: center;
 }
 .card-wrapper li label {
   display: flex;
@@ -78,14 +76,19 @@ span {
   max-width: 300px;
 }
 
+@media screen and (min-width:550px){
+  .packages-wrapper ul{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+}
+
 @media screen and (min-width: 960px) {
   .packages-wrapper ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-items: flex-start;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 80%;
+    margin: 0 auto;
   }
   .card-wrapper {
     margin: 16px 16px;

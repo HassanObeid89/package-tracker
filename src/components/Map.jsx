@@ -1,10 +1,6 @@
 import GoogleMapReact from "google-map-react";
 import { FaMapMarkerAlt } from "react-icons/fa";
-const Marker = () => (
-  <div>
-    <FaMapMarkerAlt />
-  </div>
-);
+
 export default function Map({ coordinates }) {
   return (
     <div className="map-wrapper">
@@ -14,7 +10,7 @@ export default function Map({ coordinates }) {
         defaultZoom={15}
         yesIWantToUseGoogleMapApiInternals
       >
-        <Marker lat={coordinates.lat} lng={coordinates.lng} />
+        <FaMapMarkerAlt />
       </GoogleMapReact>
     </div>
   );

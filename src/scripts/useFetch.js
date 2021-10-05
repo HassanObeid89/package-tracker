@@ -7,7 +7,6 @@ export function useFetch(uri) {
   useEffect(() => {
     //check the cache
     if (!uri) return;
-    setTimeout(() => {
       if ("caches" in window) {
         window.caches.open("my-data-caches").then((cache) => {
           cache.match(uri).then((result) => {
@@ -23,7 +22,6 @@ export function useFetch(uri) {
           });
         });
       }
-    }, 2000);
   }, []);
 
   function fetcher(uri, cache) {

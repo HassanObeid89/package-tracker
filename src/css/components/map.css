@@ -1,5 +1,5 @@
 .map-wrapper {
-  height: 200px;
+  aspect-ratio: 21/9;
   margin-top: 24px;
 }
 .map-wrapper GoogleMapReact {
@@ -7,9 +7,3 @@
   width: 100%;
 }
 
-@media screen and (min-width: 960px) {
-  .map-wrapper {
-    height: 360px;
-    margin-top: 60px;
-  }
-}
